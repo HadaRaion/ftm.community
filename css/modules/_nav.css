@@ -1,0 +1,104 @@
+nav {
+	ul {
+		display: flex;
+
+		@mixin atLarge {
+			width: 100%;
+		}
+	}
+
+	li a {
+		display: flex;
+		line-height: 2rem;
+	}
+
+	.site-header__menu,
+	.site-header__social-links {
+		flex-direction: column;
+
+		li {
+			margin-top: 40px;
+
+			&:first-child {
+				margin-top: 70px;
+			}
+		}
+
+		@mixin atLarge {
+			li,
+			li:first-child {
+				margin-top: 0px;
+			}
+		}
+	}
+
+	.site-header__menu {
+		height: 400px;
+
+		@mixin atLarge {
+			height: auto;
+			justify-content: space-around;
+			flex-grow: 6;
+			font-size: 3rem;
+			font-weight: 500;
+			letter-spacing: 0.06rem;
+			padding: 2rem 0;
+			border-bottom: 1px solid black;
+		}
+	}
+
+	.site-header__social-links {
+		@mixin atLarge {
+			height: auto;
+			justify-content: space-around;
+			flex-grow: 3;
+			align-items: flex-end;
+			font-size: 1.6rem;
+			padding: 1rem 0;
+		}
+	}
+
+	.site-header__member .cosmosfarm-members-account-links {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		right: calc((100% - 1100px) / 2);
+		height: 80px;
+
+		.cosmosfarm-members-loginout-link {
+			margin-left: 4rem;
+		}
+
+		@mixin atLarge {
+			position: relative;
+			height: auto;
+			top: 0;
+			right: 0;
+			flex-grow: 1;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem 0;
+			border-top: 1px solid black;
+
+			.cosmosfarm-members-register-link {
+				margin-left: 0px;
+			}
+		}
+	}
+
+	i {
+		display: block;
+		width: 24px;
+		height: 24px;
+		margin-right: 12px;
+		background-size: contain;
+		background-repeat: repeat;
+		background-position: center;
+
+		@mixin atLarge {
+			display: none;
+		}
+	}
+}

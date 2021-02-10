@@ -1,0 +1,24 @@
+@import url('http://fonts.cdnfonts.com/css/tt-commons?styles=87755,87754');
+/* 'TT Commons',  */
+html,
+body {
+	font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
+	position: relative;
+	min-height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: center;
+	background-color: $lightGray;
+
+	@mixin atLarge {
+		display: block;
+		background-color: #fff;
+	}
+}

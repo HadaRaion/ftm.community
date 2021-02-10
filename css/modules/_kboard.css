@@ -1,0 +1,381 @@
+#kboard-default-list {
+	/* 전체글수 게시글 정렬기준 */
+	.kboard-list-header {
+		display: none;
+	}
+
+	/* 게시판 카테고리 */
+	.kboard-category .kboard-category-list {
+		margin: 0 0 5px 0;
+		padding: 10px 10px 15px;
+		border: 0;
+		background-color: $lightGray;
+		overflow: hidden;
+
+		& li a {
+			display: block;
+			padding: 10px 10px 8px 10px;
+			font-size: 1.4rem;
+			font-weight: 400;
+			border: 0;
+			border-bottom: none;
+			text-decoration: none;
+			text-shadow: none;
+			box-shadow: none;
+			color: #000;
+		}
+
+		li.kboard-category-selected a {
+			color: #000;
+			font-weight: 400;
+			text-decoration: underline;
+			text-underline-offset: 5px;
+			border-bottom: none;
+		}
+	}
+
+	/* 게시판 리스트 */
+	.kboard-list {
+		table td {
+			padding: 20px 0;
+			height: auto;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 1.4rem;
+		}
+		thead tr td {
+			color: #000;
+			font-weight: 500;
+			border-bottom: 1px solid $gray;
+		}
+		table td.kboard-list-vote {
+			display: none;
+		}
+		tbody td.kboard-list-title .kboard-comments-count {
+			color: #bbb;
+		}
+	}
+	/* 페이지네이션 */
+	.kboard-pagination .kboard-pagination-pages {
+		li a {
+			font-family: Cera Pro;
+			display: block;
+			margin: 0 4px;
+			padding: 0;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			line-height: 28px;
+			font-size: 14px;
+			font-weight: 400;
+			text-align: center;
+			color: #000;
+			background-color: transparent;
+			transition-duration: 0s;
+		}
+
+		li.active a {
+			color: #000;
+			font-weight: 700;
+			background-color: $yellow;
+		}
+
+		li:hover a {
+			font-weight: bold;
+		}
+
+		li.prev-page a,
+		li.next-page a {
+			padding: 0;
+		}
+		li.first-page,
+		li.last-page {
+			display: none;
+		}
+	}
+}
+/* 새글 아이콘 */
+.kboard-default-new-notify {
+	display: inline-block;
+	zoom: 1;
+	padding: 2px 2px;
+	line-height: 10px;
+	font-size: 10px;
+	color: white;
+	background-color: $red;
+	font-weight: normal;
+}
+
+/* 글 상세페이지 */
+#kboard-default-document {
+	.kboard-title h1 {
+		color: $darkGray;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.kboard-detail {
+		background-color: transparent;
+		border-top: 0;
+		border-bottom: 1px solid $gray;
+		.detail-attr .detail-name {
+			color: $darkGray;
+		}
+		.detail-attr .detail-value {
+			color: $midGray;
+		}
+		.detail-attr.detail-writer {
+			padding-left: 3px;
+		}
+
+		.detail-attr.detail-category1 {
+			padding-left: 3px;
+		}
+	}
+
+	.kboard-content .content-view {
+		padding-left: 5px;
+	}
+
+	/* 좋아요 싫어요 인쇄 버튼 */
+	.kboard-button-action,
+	.kboard-document-navi {
+		display: none;
+	}
+}
+
+/* 댓글 첨부파일 */
+.kboard-comments-default {
+	background-color: transparent;
+
+	hr {
+		display: none;
+	}
+	.comments-header {
+		padding-left: 8px;
+	}
+	.kboard-comments-form {
+		padding-left: 3px;
+	}
+
+	.comments-count .comments-total-count {
+		color: $darkGray;
+	}
+	.comments-sort select {
+		display: none;
+	}
+	.kboard-comments-form .comments-field.field-image1,
+	.kboard-comments-form .comments-field.field-file1 {
+		display: none;
+	}
+	.cosmosfarm-members-form button,
+	.cosmosfarm-members-form input[type='submit'] {
+	}
+	.kboard-comments-form .comments-submit-button input[type='submit'] {
+		background-color: $darkGray !important;
+		color: #fff !important;
+		border-radius: 5px;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 20px;
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+	.comments-list .comments-list-controller .comments-button-action {
+		display: none;
+	}
+}
+
+#kboard-default-list .kboard-search {
+	padding-top: 20px;
+
+	input,
+	select {
+		height: 40px;
+		line-height: 40px;
+		border-radius: 5px;
+	}
+}
+
+a.kboard-default-button-small,
+input.kboard-default-button-small,
+button.kboard-default-button-small {
+	background-color: $darkGray !important;
+	color: #fff !important;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+}
+
+/* 로그인 */
+.cosmosfarm-members-form {
+	padding: 50px 0 70px;
+
+	@mixin atSmall {
+		padding: 0;
+		margin-top: -20px;
+	}
+
+	&.signup-form {
+		padding: 30px 0 10px;
+
+		@mixin atSmall {
+			padding: 0;
+			margin-top: -20px;
+		}
+	}
+	&.signin-form {
+		width: 50%;
+		padding: 50px 0 70px;
+
+		@mixin atSmall {
+			padding: 22px 0 0px;
+		}
+	}
+}
+
+.cosmosfarm-members-form .form-top .form-top-wrap .form-input-row label {
+	color: $midGray;
+}
+.cosmosfarm-members-form .form-top .form-top-wrap .form-input-row input {
+	border: 1px solid $gray;
+	border-radius: 5px;
+	background: $lightGray;
+}
+
+.cosmosfarm-members-form input[type='checkbox'] {
+	border: 1px solid $gray;
+	border-radius: 0px;
+	background: $lightGray;
+}
+
+.cosmosfarm-members-form label {
+	color: $midGray;
+}
+.cosmosfarm-members-form select,
+.cosmosfarm-members-form input[type='text'],
+.cosmosfarm-members-form input[type='email'],
+.cosmosfarm-members-form input[type='date'],
+.cosmosfarm-members-form input[type='url'],
+.cosmosfarm-members-form input[type='number'],
+.cosmosfarm-members-form input[type='password'] {
+	background: $lightGray;
+	border: 1px solid $gray;
+	border-radius: 5px;
+}
+
+.cosmosfarm-members-form button,
+.cosmosfarm-members-form input[type='submit'] {
+	background: $darkGray !important;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.cosmosfarm-members-form label {
+	font-size: 1.3rem;
+}
+
+.cosmosfarm-members-form .button_div {
+	margin: 50px 0;
+}
+/* 로그인 체크박스 */
+.checkbox_div {
+	[type='checkbox']:not(:checked),
+	[type='checkbox']:checked {
+		position: absolute;
+		left: 0;
+		opacity: 0.01;
+	}
+
+	[type='checkbox']:not(:checked) + label,
+	[type='checkbox']:checked + label {
+		position: relative;
+		padding-left: 2em;
+		padding-bottom: 0;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1.4em;
+			height: 1.4em;
+			border: var(--border);
+			background: $lightGray;
+			border-radius: 0;
+			transition: all 0.275s;
+		}
+
+		&::after {
+			content: '✓';
+			position: absolute;
+			top: 0.45em;
+			left: 0.225em;
+			font-size: 1.375em;
+			color: $midGray;
+			line-height: 0;
+			transition: all 0.2s;
+		}
+	}
+
+	[type='checkbox']:not(:checked) + label:after {
+		opacity: 0;
+		transform: scale(0) rotate(45deg);
+	}
+
+	[type='checkbox']:checked + label:after {
+		opacity: 1;
+		transform: scale(1) rotate(0);
+	}
+}
+/* 로그인 하단 */
+.cosmosfarm-members-form .checkbox_div {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.pwdreset {
+	line-height: 1;
+}
+.cosmosfarm-members-form a {
+	color: $midGray;
+	font-size: 1.3rem;
+}
+
+/* 회원가입 */
+.req,
+.req-text {
+	display: none;
+}
+
+.cosmosfarm-members-form input::placeholder {
+	font-size: 1.3rem;
+}
+
+.div_checkbox .policy_content {
+	border-color: $lightGray;
+
+	& p {
+		color: $midGray;
+		font-size: 1.3rem;
+	}
+}
+
+/* 로그인 후 사용가능 */
+.cosmosfarm-members-form .message {
+	color: $midGray;
+	font-size: 1.3rem;
+}
+
+/* 회원정보 */
+
+.cosmosfarm-members-form .profile-header .display-name {
+	color: $darkGray;
+}
+.cosmosfarm-members-form .members-link {
+	background-color: $darkGray;
+}

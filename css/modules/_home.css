@@ -1,0 +1,18 @@
+.home {
+	color: $darkGray;
+	h2 {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	thead {
+		display: none;
+	}
+
+	#kboard-default-latest table .kboard-latest-title {
+		padding: 10px 0;
+	}
+
+	&__contents {
+		margin: 20px 0 40px;
+	}
+}
