@@ -144,6 +144,21 @@
 	}
 }
 
+/* 댓글 */
+
+.raion-comments-list-controller {
+	/* float: right;
+		display: flex; */
+	margin-top: -2px;
+}
+
+.raion-comments-list-controller .comments-button-action {
+	margin-right: 5px;
+	padding: 2px 4px 4px;
+	font-size: 1.2rem;
+
+	border-radius: 0;
+}
 /* 댓글 첨부파일 */
 .kboard-comments-default {
 	background-color: transparent;
@@ -280,7 +295,12 @@ button.kboard-default-button-small {
 .cosmosfarm-members-form .button_div {
 	margin: 50px 0;
 }
-/* 로그인 체크박스 */
+/* 로그인, 회원가입 체크박스 */
+
+.div_checkbox .policy_content {
+	margin-bottom: 6px;
+}
+.div_checkbox,
 .checkbox_div {
 	[type='checkbox']:not(:checked),
 	[type='checkbox']:checked {
@@ -292,7 +312,7 @@ button.kboard-default-button-small {
 	[type='checkbox']:not(:checked) + label,
 	[type='checkbox']:checked + label {
 		position: relative;
-		padding-left: 2em;
+		padding-left: 1.9em;
 		padding-bottom: 0;
 		cursor: pointer;
 
@@ -300,7 +320,7 @@ button.kboard-default-button-small {
 			content: '';
 			position: absolute;
 			left: 0;
-			top: 0;
+			top: 0.1em;
 			width: 1.4em;
 			height: 1.4em;
 			border: var(--border);
@@ -312,7 +332,7 @@ button.kboard-default-button-small {
 		&::after {
 			content: '✓';
 			position: absolute;
-			top: 0.45em;
+			top: 0.55em;
 			left: 0.225em;
 			font-size: 1.375em;
 			color: $midGray;

@@ -1,6 +1,6 @@
 import '../css/style.css';
 // import anime from 'animejs'
-// Our modules / classes
+
 import MobileMenu from './modules/MobileMenu';
 import Animation from './modules/Animation';
 

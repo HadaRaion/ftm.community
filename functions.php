@@ -75,3 +75,21 @@ add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
   $exclude_filters[] = 'themes/ftm-community/node_modules';
   return $exclude_filters;
 });
+
+add_filter('wpmem_register_form_rows', 'wpmem_register_form_rows_20210210', 999, 2);
+function wpmem_register_form_rows_20210210($rows, $toggle){
+	if(isset($rows['policy_service'])){
+		$policy_service = wpautop(get_cosmosfarm_policy_service_content());
+		$rows['policy_service']['field_before'] = '<div class="div_checkbox agree">';
+		$rows['policy_service']['field_before'] .= "<div class=\"policy_content\">{$policy_service}</div>";
+		$rows['policy_service']['field'] = '<input name="policy_service" type="checkbox" id="policy_service" value="agree"><label for="policy_service">이용약관에 동의합니다.</label>';
+	}
+	if(isset($rows['policy_privacy'])){
+		$policy_privacy = wpautop(get_cosmosfarm_policy_privacy_content());
+		$rows['policy_privacy']['field_before'] = '<div class="div_checkbox agree">';
+		$rows['policy_privacy']['field_before'] .= "<div class=\"policy_content\">{$policy_privacy}</div>";
+		$rows['policy_privacy']['field'] = '<input name="policy_privacy" type="checkbox" id="policy_privacy" value="agree"><label for="policy_privacy">이용약관에 동의합니다.</label>';
+	}
+	
+	return $rows;
+}
